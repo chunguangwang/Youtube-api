@@ -20,12 +20,12 @@ export default function FullWidthGrid() {
         {/* {`(min-width:600px) matches: ${matches}`} */}
         <Grid item sm={matches?6:12}>
             <Paper className={classes.Paper}>
-            {matches?`Left`:`Top`} Pane
+            {matches?'Left':'Top'} Pane
             </Paper>
         </Grid>
         <Grid item sm={matches?6:12}>
             <Paper className={classes.Paper}>
-            {matches?`Right`:`Bottom`} Pane
+            {matches?'Right':'Bottom'} Pane
             </Paper>
         </Grid>
     </Grid>

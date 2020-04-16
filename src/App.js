@@ -3,14 +3,14 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 
 import {SearchBar, VideoDetail, VideoList} from './components';
-import './ExerIndex'
+import './ExerIndex';
 
 import youtube from './api/youtube';
-import hello from './api/hello';
+// import hello from './api/hello';
 
 import './App.css';
-import Exercises from './components/Exercises';
-import ExerIndex from './ExerIndex';
+// import Exercises from './components/Exercises';
+// import ExerIndex from './ExerIndex';
 
 class App extends React.Component {
 
@@ -37,8 +37,8 @@ class App extends React.Component {
             }
         });
 
-        const extraResponse = await hello.get();
-        console.log(extraResponse.data);
+        // const extraResponse = await hello.get();
+        // console.log(extraResponse.data);
 
         this.setState({ videos: response.data.items, selectedVideo: response.data.items[0] });
         console.log(response.data.items);
@@ -51,11 +51,10 @@ class App extends React.Component {
             // <Grid justify="center" container spacing={10}>
             //     <Grid item xs={12}>
             <div>
-                  <Exercises />
-                    <ExerIndex />
+                  {/* <Exercises />
+                    <ExerIndex /> */}
                     <Grid container spacing={10} >
-                        <Grid item xs={12}>
-                          
+                        <Grid item xs={12}> 
                             <SearchBar onFormSubmit={this.handleSubmit} />
                         </Grid>
 
