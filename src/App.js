@@ -6,7 +6,7 @@ import {SearchBar, VideoDetail, VideoList} from './components';
 import './ExerIndex';
 
 import youtube from './api/youtube';
-// import hello from './api/hello';
+import hello from './api/hello';
 
 import './App.css';
 // import Exercises from './components/Exercises';
@@ -37,11 +37,11 @@ class App extends React.Component {
             }
         });
 
-        // const extraResponse = await hello.get();
-        // console.log(extraResponse.data);
+        const extraResponse = await hello.get();
+        console.log(extraResponse.data);
 
         this.setState({ videos: response.data.items, selectedVideo: response.data.items[0] });
-        console.log(response.data.items);
+        // console.log(response.data.items);
     } 
 
     render(){
